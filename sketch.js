@@ -31,6 +31,9 @@ function draw() {
     background(bgImg);
     //Write condition here to evalute if tom and jerry collide
     if(tom.x - jerry.x < (tom.width - jerry.width)/2 ){
+        
+        tom.velocityX = 0;
+        tom.x = 300;
 
         tom.addAnimation("tomsitting",tomImg3);
         jerry.addAnimation("jerryStanding",jerryImg3);
@@ -47,7 +50,7 @@ function keyPressed(){
     jerry.frameDelay = 25;
 
     tom.addAnimation("tomsitting",tomImg2);
-    tom.x = tom.x-10;
+    tom.velocityX = -5;
   }
 
   
